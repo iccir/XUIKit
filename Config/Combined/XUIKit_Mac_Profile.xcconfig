@@ -1,0 +1,3 @@
+#include "../XUIKit_Base.xcconfig"
+#include "../XUIKit_Profile.xcconfig"
+#include "../XUIKit_Mac.xcconfig"
