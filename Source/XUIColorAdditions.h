@@ -21,12 +21,16 @@
 
 @interface NSColor (XUIKitAdditions)
 
-- (id) initWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
-- (id) initWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
-- (id) initWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-- (id) initWithCGColor:(CGColorRef)ref;
-- (id) initWithPatternImage:(NSImage *)patternImage;
-- (id) initWithCIColor:(CIColor *)ciColor;
++ (instancetype) colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
++ (instancetype) colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
++ (instancetype) colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
+
+- (instancetype) initWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
+- (instancetype) initWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
+- (instancetype) initWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (instancetype) initWithCGColor:(CGColorRef)ref;
+- (instancetype) initWithPatternImage:(NSImage *)patternImage;
+- (instancetype) initWithCIColor:(CIColor *)ciColor;
 
 @property (nonatomic, readonly) CIColor *CIColor;
 

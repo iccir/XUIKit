@@ -26,34 +26,9 @@
 
 @interface NSImage (XUIKitAdditions)
 
-+ (instancetype) imageWithContentsOfFile:(NSString *)path;
-+ (instancetype) imageWithData:(NSData *)data;
-+ (instancetype) imageWithData:(NSData *)data scale:(CGFloat)scale;
-+ (instancetype) imageWithCGImage:(CGImageRef)cgImage;
 + (instancetype) imageWithCGImage:(CGImageRef)cgImage scale:(CGFloat)scale orientation:(XUIImageOrientation)orientation;
-+ (instancetype) imageWithCIImage:(CIImage *)ciImage;
-+ (instancetype) imageWithCIImage:(CIImage *)ciImage scale:(CGFloat)scale orientation:(XUIImageOrientation)orientation;
-
-- (id) initWithData:(NSData *)data scale:(CGFloat)scale;
-
-- (id) initWithCGImage:(CGImageRef)cgImage;
 - (id) initWithCGImage:(CGImageRef)cgImage scale:(CGFloat)scale orientation:(XUIImageOrientation)orientation;
 
-- (id) initWithCIImage:(CIImage *)ciImage;
-- (id) initWithCIImage:(CIImage *)ciImage scale:(CGFloat)scale orientation:(XUIImageOrientation)orientation;
-
-
-
-@property (nonatomic, assign,    readonly) CGSize     size;
-@property (nonatomic, /*strong*/ readonly) CGImageRef CGImage;
-@property (nonatomic,            readonly) CIImage   *CIImage;
-@property (nonatomic, assign,    readonly) CGFloat    scale;
-
-- (void) drawAtPoint:(CGPoint)point;
-- (void) drawAtPoint:(CGPoint)point blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha;
 - (void) drawInRect:(CGRect)rect;
-- (void) drawInRect:(CGRect)rect blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha;
-
-- (void) drawAsPatternInRect:(CGRect)rect;
 
 @end

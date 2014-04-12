@@ -24,3 +24,84 @@
 #define kXUIOffsetFormat         "{%lf, %lf}"
 #define kCGAffineTransformFormat "[%lf, %lf, %lf, %lf, %lf, %lf]"
 
+const XUIEdgeInsets XUIEdgeInsetsZero = { 0 };
+const XUIOffset XUIOffsetZero = { 0 };
+
+
+CGPoint XUI_CGPointFromString(NSString *string)
+{
+    return NSPointToCGPoint(NSPointFromString(string));
+}
+
+
+CGSize XUI_CGSizeFromString(NSString *string)
+{
+    return NSSizeToCGSize(NSSizeFromString(string));
+}
+
+
+CGRect XUI_CGRectFromString(NSString *string)
+{
+    return NSRectToCGRect(NSRectFromString(string));
+}
+
+
+CGAffineTransform XUI_CGAffineTransformFromString(NSString *string)
+{
+    CGAffineTransform result = CGAffineTransformIdentity;
+    if (string) sscanf([string UTF8String], kCGAffineTransformFormat, &result.a, &result.b, &result.c, &result.d, &result.tx, &result.ty);
+    return result;
+}
+
+
+XUIEdgeInsets XUIEdgeInsetsFromString(NSString *string)
+{
+    XUIEdgeInsets result = XUIEdgeInsetsZero;
+    if (string) sscanf([string UTF8String], kXUIEdgeInsetsFormat, &result.top, &result.left, &result.bottom, &result.right);
+    return result;
+}
+
+
+XUIOffset XUIOffsetFromString(NSString *string)
+{
+    XUIOffset result = XUIOffsetZero;
+    if (string) sscanf([string UTF8String], kXUIOffsetFormat, &result.horizontal, &result.vertical);
+    return result;
+}
+
+
+NSString *XUI_NSStringFromCGPoint(CGPoint point)
+{
+    return NSStringFromPoint(NSPointFromCGPoint(point));
+}
+
+
+NSString *XUI_NSStringFromCGSize(CGSize size)
+{
+    return NSStringFromSize(NSSizeFromCGSize(size));
+}
+
+
+NSString *XUI_NSStringFromCGRect(CGRect rect)
+{
+    return NSStringFromRect(NSRectFromCGRect(rect));
+}
+
+
+NSString *XUI_NSStringFromCGAffineTransform(CGAffineTransform transform)
+{
+    return [NSString stringWithFormat:@kCGAffineTransformFormat, transform.a, transform.b, transform.c, transform.d, transform.tx, transform.ty];
+}
+
+
+NSString *XUI_NSStringFromXUIEdgeInsets(XUIEdgeInsets insets)
+{
+    return [NSString stringWithFormat:@kXUIEdgeInsetsFormat, (double)insets.top, (double)insets.left, (double)insets.bottom, (double)insets.right];
+}
+
+
+NSString *XUI_NSStringFromXUIOffset(XUIOffset offset)
+{
+    return [NSString stringWithFormat:@kXUIOffsetFormat, offset.horizontal, offset.vertical];
+}
+

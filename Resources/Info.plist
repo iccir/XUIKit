@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>net.musictheory.XUIKit</string>
+	<string>com.iccir.XUIKit</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -23,7 +23,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2012 musictheory.net, LLC. All rights reserved.</string>
+	<string>© 2013-2014 Ricci Adams</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>

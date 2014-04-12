@@ -64,11 +64,13 @@ BOOL XUIAliasMethod(Class cls, char plusOrMinus, SEL originalSel, SEL aliasSel)
         result = class_addMethod(cls, aliasSel, imp, types);
     }
 
+#if DEBUG
     if (!result) {
         @autoreleasepool {
             NSLog(@"XUIAliasMethod(): could not alias '%@' to '%@'", NSStringFromSelector(originalSel), NSStringFromSelector(aliasSel));
         }
     }
+#endif
 
     return result;
 }

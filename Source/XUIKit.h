@@ -27,6 +27,7 @@
 #import <XUIKit/XUIBezierPathAdditions.h>
 #import <XUIKit/XUIColorAdditions.h>
 #import <XUIKit/XUIFontAdditions.h>
+#import <XUIKit/XUIImageAdditions.h>
 #import <XUIKit/XUIIndexPathAdditions.h>
 #import <XUIKit/XUIValueAdditions.h>
 #import <XUIKit/XUIViewAdditions.h>

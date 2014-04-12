@@ -31,12 +31,15 @@
     XUIAliasMethod(cls, '+', @selector(xui_valueWithCGSize:),            @selector(valueWithCGSize:));
     XUIAliasMethod(cls, '+', @selector(xui_valueWithCGRect:),            @selector(valueWithCGRect:));
     XUIAliasMethod(cls, '+', @selector(xui_valueWithCGAffineTransform:), @selector(valueWithCGAffineTransform:));
+    XUIAliasMethod(cls, '+', @selector(xui_valueWithXUIEdgeInsets:),     @selector(valueWithXUIEdgeInsets:));
+    XUIAliasMethod(cls, '+', @selector(xui_valueWithXUIOffset:),         @selector(valueWithXUIOffset:));
 
     XUIAliasMethod(cls, '-', @selector(xui_CGPointValue),            @selector(CGPointValue));
     XUIAliasMethod(cls, '-', @selector(xui_CGSizeValue),             @selector(CGSizeValue));
     XUIAliasMethod(cls, '-', @selector(xui_CGRectValue),             @selector(CGRectValue));
     XUIAliasMethod(cls, '-', @selector(xui_CGAffineTransformValue),  @selector(CGAffineTransformValue));
-
+    XUIAliasMethod(cls, '-', @selector(xui_XUIEdgeInsetsValue),      @selector(XUIEdgeInsetsValue));
+    XUIAliasMethod(cls, '-', @selector(xui_XUIOffsetValue),          @selector(XUIOffsetValue));
 }
 
 
@@ -64,6 +67,18 @@
 }
 
 
++ (NSValue *) xui_valueWithXUIEdgeInsets:(XUIEdgeInsets)insets
+{
+    return [NSValue valueWithBytes:&insets objCType:@encode(XUIEdgeInsets)];
+}
+
+
++ (NSValue *) xui_valueWithXUIOffset:(XUIOffset)offset
+{
+    return [NSValue valueWithBytes:&offset objCType:@encode(XUIOffset)];
+}
+
+
 - (CGPoint) xui_CGPointValue
 {
     return NSPointToCGPoint([self pointValue]);
@@ -87,6 +102,30 @@
     CGAffineTransform result = CGAffineTransformIdentity;
 
     if (strcmp([self objCType], @encode(CGAffineTransform)) == 0) {
+        [self getValue:&result];
+    }
+
+    return result;
+}
+
+
+- (XUIEdgeInsets) xui_XUIEdgeInsetsValue
+{
+    XUIEdgeInsets result = XUIEdgeInsetsZero;
+
+    if (strcmp([self objCType], @encode(XUIEdgeInsets)) == 0) {
+        [self getValue:&result];
+    }
+
+    return result;
+}
+
+
+- (XUIOffset) xui_XUIOffsetValue
+{
+    XUIOffset result = XUIOffsetZero;
+
+    if (strcmp([self objCType], @encode(XUIOffset)) == 0) {
         [self getValue:&result];
     }
 

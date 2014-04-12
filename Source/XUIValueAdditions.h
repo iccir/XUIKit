@@ -19,7 +19,7 @@
 */
 
 #import <XUIKit/XUITypes.h>
-
+#import <XUIKit/XUIGeometry.h>
 
 @interface NSValue (XUIKitAdditions)
 
@@ -27,11 +27,15 @@
 + (NSValue *) valueWithCGSize:(CGSize)size;
 + (NSValue *) valueWithCGRect:(CGRect)rect;
 + (NSValue *) valueWithCGAffineTransform:(CGAffineTransform)t;
++ (NSValue *) valueWithXUIEdgeInsets:(XUIEdgeInsets)insets;
++ (NSValue *) valueWithXUIOffset:(XUIOffset)insets;
 
 - (CGPoint)   CGPointValue;
 - (CGSize)    CGSizeValue;
 - (CGRect)    CGRectValue;
 - (CGAffineTransform) CGAffineTransformValue;
+- (XUIEdgeInsets) XUIEdgeInsetsValue;
+- (XUIOffset) XUIOffsetValue;
 
 @end
 

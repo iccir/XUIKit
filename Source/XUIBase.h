@@ -25,6 +25,8 @@
 #define XUIKIT_EXTERN extern __attribute__((visibility ("default")))
 #endif
 
+#define XUIKIT_STATIC_INLINE static inline
+
 #import <Foundation/Foundation.h>
 
 BOOL XUIAliasMethod(  Class cls, char plusOrMinus, SEL originalSel, SEL aliasSel);

@@ -49,7 +49,6 @@
 		55545A3514EC69500074B45E /* XUIBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XUIBase.h; path = Source/XUIBase.h; sourceTree = SOURCE_ROOT; };
 		55545A3714EC6B1B0074B45E /* XUIGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XUIGeometry.h; path = Source/XUIGeometry.h; sourceTree = SOURCE_ROOT; };
 		55545A3814EC6B1B0074B45E /* XUIGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XUIGeometry.m; path = Source/XUIGeometry.m; sourceTree = SOURCE_ROOT; };
-		5566B94115A65021005F82F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
 		5566B94515A65021005F82F8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5566B94615A65021005F82F8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5566B94715A65021005F82F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,6 +61,7 @@
 		5579298114FEE1FC00FCDE7C /* XUIKit_Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XUIKit_Profile.xcconfig; sourceTree = "<group>"; };
 		5579298214FEE1FC00FCDE7C /* XUIKit_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XUIKit_Release.xcconfig; sourceTree = "<group>"; };
 		559BE0EE159C19F800A1735C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		55CB053618286B5C001DD1A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		55D4248614EDDB31001F6F71 /* XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XUIKit.h; path = Source/XUIKit.h; sourceTree = "<group>"; };
 		55F84905181CC05700BABB66 /* XUITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XUITypes.h; path = Source/XUITypes.h; sourceTree = "<group>"; };
 		55F84908181CC13A00BABB66 /* XUIBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XUIBezierPathAdditions.h; path = Source/XUIBezierPathAdditions.h; sourceTree = "<group>"; };
@@ -124,6 +124,7 @@
 				55227AE214EDDA220009B477 /* Graphics */,
 				55F84907181CC0DF00BABB66 /* Additions */,
 				55545A0814EC607B0074B45E /* View Hierarchy */,
+				55CB053518286B51001DD1A0 /* Resources */,
 				55545A0114EC607B0074B45E /* Frameworks */,
 				55545A0014EC607B0074B45E /* Products */,
 			);
@@ -144,7 +145,6 @@
 				55545A0214EC607B0074B45E /* Cocoa.framework */,
 				55545A0514EC607B0074B45E /* AppKit.framework */,
 				55545A0714EC607B0074B45E /* Foundation.framework */,
-				5566B94115A65021005F82F8 /* SenTestingKit.framework */,
 				5566B94415A65021005F82F8 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -193,6 +193,14 @@
 			path = Combined;
 			sourceTree = "<group>";
 		};
+		55CB053518286B51001DD1A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55CB053618286B5C001DD1A0 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		55F84907181CC0DF00BABB66 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,19 +229,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F8491F181CC2BB00BABB66 /* XUIViewAdditions.h in Headers */,
 				55100903159BEEA600C86022 /* XUIKit.h in Headers */,
+				55F84906181CC05700BABB66 /* XUITypes.h in Headers */,
 				559BE0C2159C151F00A1735C /* XUIBase.h in Headers */,
 				55100907159BEED100C86022 /* XUIGeometry.h in Headers */,
 				55100908159BEED100C86022 /* XUIGraphics.h in Headers */,
-				55100920159BEED100C86022 /* XUIView.h in Headers */,
-				55F84922181CC99900BABB66 /* XUIImageAdditions.h in Headers */,
-				55F84912181CC16C00BABB66 /* XUIFontAdditions.h in Headers */,
-				55F84916181CC21A00BABB66 /* XUIIndexPathAdditions.h in Headers */,
-				55F84906181CC05700BABB66 /* XUITypes.h in Headers */,
 				55F8490C181CC13A00BABB66 /* XUIBezierPathAdditions.h in Headers */,
 				55F8490E181CC13A00BABB66 /* XUIColorAdditions.h in Headers */,
+				55F84912181CC16C00BABB66 /* XUIFontAdditions.h in Headers */,
+				55F84922181CC99900BABB66 /* XUIImageAdditions.h in Headers */,
+				55F84916181CC21A00BABB66 /* XUIIndexPathAdditions.h in Headers */,
 				55F8491A181CC22500BABB66 /* XUIValueAdditions.h in Headers */,
+				55F8491F181CC2BB00BABB66 /* XUIViewAdditions.h in Headers */,
+				55100920159BEED100C86022 /* XUIView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +331,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
-				INFOPLIST_FILE = "Resources/XUIKit-info.plist";
 				MACH_O_TYPE = mh_dylib;
 			};
 			name = Debug;
@@ -332,11 +339,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5579297C14FEE1FC00FCDE7C /* XUIKit_Mac_Profile.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
-				INFOPLIST_FILE = "Resources/XUIKit-info.plist";
 				MACH_O_TYPE = mh_dylib;
 			};
 			name = Profile;
@@ -345,11 +352,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5579297D14FEE1FC00FCDE7C /* XUIKit_Mac_Release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
-				INFOPLIST_FILE = "Resources/XUIKit-info.plist";
 				MACH_O_TYPE = mh_dylib;
 			};
 			name = Release;

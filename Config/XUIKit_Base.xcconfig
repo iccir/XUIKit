@@ -14,3 +14,6 @@ GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 PRODUCT_NAME = $(TARGET_NAME)
 SKIP_INSTALL = YES
 MACH_O_TYPE = mh_bundle
+LD_RUNPATH_SEARCH_PATHS=@rpath
+INSTALL_PATH=@rpath
+INFOPLIST_FILE = Resources/Info.plist

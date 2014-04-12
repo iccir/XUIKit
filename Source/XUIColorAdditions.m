@@ -34,9 +34,11 @@
     
     XUISwizzleMethod(cls, '+', @selector(xui_colorWithCIColor:), @selector(colorWithCIColor:));
 
-    XUIAliasMethod(cls, '+', @selector(xui_colorWithWhite:alpha:),                     @selector(colorWithWhite:alpha:));
-    XUIAliasMethod(cls, '+', @selector(xui_colorWithRed:green:blue:alpha:),            @selector(colorWithRed:green:blue:alpha:));
-    XUIAliasMethod(cls, '+', @selector(xui_colorWithHue:saturation:brightness:alpha:), @selector(colorWithHue:saturation:brightness:alpha:));
+    if (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_8) {
+        XUIAliasMethod(cls, '+', @selector(xui_colorWithWhite:alpha:),                     @selector(colorWithWhite:alpha:));
+        XUIAliasMethod(cls, '+', @selector(xui_colorWithRed:green:blue:alpha:),            @selector(colorWithRed:green:blue:alpha:));
+        XUIAliasMethod(cls, '+', @selector(xui_colorWithHue:saturation:brightness:alpha:), @selector(colorWithHue:saturation:brightness:alpha:));
+    }
 
     XUIAliasMethod(cls, '-', @selector(xui_initWithWhite:alpha:),                      @selector(initWithWhite:alpha:));
     XUIAliasMethod(cls, '-', @selector(xui_initWithHue:saturation:brightness:alpha:),  @selector(initWithHue:saturation:brightness:alpha:));
