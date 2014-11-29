@@ -46,7 +46,8 @@
 - (void) layoutIfNeeded;
 - (void) layoutSubviews;
 
-@property (nonatomic)       NSInteger          tag;
+@property (atomic, readwrite) NSInteger tag;
+
 @property (nonatomic)       CGPoint            center;
 @property (nonatomic)       CGAffineTransform  transform;
 @property (nonatomic)       BOOL               clipsToBounds;
@@ -56,7 +57,7 @@
 @property (nonatomic)       CGFloat            contentScaleFactor;
 
 // Defaults to YES
-@property (nonatomic, getter=isFlipped) BOOL flipped;
+@property (atomic, readwrite, getter=isFlipped) BOOL flipped;
 
 @end
 

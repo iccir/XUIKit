@@ -30,13 +30,15 @@
 #import <objc/runtime.h>
 
 
+/* Uncomment when implementing -[XUIView setContentMode:] and -[XUIView contentMode]
+
 static const NSInteger sModeToPlacementMapCount = 12;
 
 static const struct {
     XUIViewContentMode mode;
     NSViewLayerContentsPlacement placement;
 } sModeToPlacementMap[sModeToPlacementMapCount] = {
-    { XUIViewContentModeScaleToFill,    NSViewLayerContentsPlacementScaleAxesIndependently     },
+    { XUIViewContentModeScaleToFill,     NSViewLayerContentsPlacementScaleAxesIndependently     },
     { XUIViewContentModeScaleAspectFit,  NSViewLayerContentsPlacementScaleProportionallyToFit  },
     { XUIViewContentModeScaleAspectFill, NSViewLayerContentsPlacementScaleProportionallyToFill },
     { XUIViewContentModeCenter,          NSViewLayerContentsPlacementCenter                    },
@@ -49,11 +51,14 @@ static const struct {
     { XUIViewContentModeBottomLeft,      NSViewLayerContentsPlacementBottomLeft                },
     { XUIViewContentModeBottomRight,     NSViewLayerContentsPlacementBottomRight               }
 };
+*/
 
 
 @implementation XUIView {
     BOOL _implementsDrawRect;
 }
+
+@synthesize tag = _tag, flipped = _flipped;
 
 
 static IMP sXUIView_drawRect = NULL;
@@ -78,7 +83,7 @@ static IMP sXUIView_drawRect = NULL;
 - (id) initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame])) {
-        _flipped = YES;
+        [self setFlipped:YES];
 
         IMP selfDrawRect = [[self class] instanceMethodForSelector:@selector(drawRect:)];
         _implementsDrawRect = (selfDrawRect != sXUIView_drawRect);

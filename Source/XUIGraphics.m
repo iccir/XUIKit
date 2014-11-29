@@ -31,8 +31,6 @@
 static NSGraphicsContext *sOriginalContext   = nil;
 static NSMutableArray    *sContextStateStack = nil;
 
-static const CGRect sDefaultPDFBounds = { { 0, 0 }, { 612, 792 } };
-
 typedef NS_ENUM(NSInteger, XUIGraphicsContextStateType) {
     XUIGraphicsContextStateTypeUnknown,
     XUIGraphicsContextStateTypeImage,

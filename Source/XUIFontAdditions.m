@@ -33,8 +33,13 @@
     XUIAliasMethod(cls, '+', @selector(xui_fontNamesForFamilyName:), @selector(fontNamesForFamilyName:));
     XUIAliasMethod(cls, '+', @selector(xui_italicSystemFontOfSize:), @selector(italicSystemFontOfSize:));
 
-    XUIAliasMethod(cls, '-', @selector(xui_fontWithSize:),           @selector(fontWithSize:));
     XUIAliasMethod(cls, '-', @selector(xui_lineHeight),              @selector(lineHeight));
+
+    // -[NSFont fontWithSize:] is in 10.10, but as private API.  Avoid runtime warning.
+    // <rdar://19094897> -[NSFont fontWithSize:] should be public API
+    if (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_9) {
+        XUIAliasMethod(cls, '-', @selector(xui_fontWithSize:), @selector(fontWithSize:));
+    }
 }
 
 
@@ -95,4 +100,13 @@
 }
 
 
+@end
+
+
+@interface XUIFont : NSFont
+@end
+
+
+@implementation XUIFont : NSFont
+- (NSFont *) fontWithSize:(CGFloat)fontSize { return [self xui_fontWithSize:fontSize]; }
 @end

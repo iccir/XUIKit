@@ -40,13 +40,18 @@
     XUIAliasMethod(cls, '-', @selector(xui_fillWithBlendMode:alpha:),                                       @selector(fillWithBlendMode:alpha:));
     XUIAliasMethod(cls, '-', @selector(xui_strokeWithBlendMode:alpha:),                                     @selector(strokeWithBlendMode:alpha:));
     XUIAliasMethod(cls, '-', @selector(xui_setCGPath:),                                                     @selector(setCGPath:));
-    XUIAliasMethod(cls, '-', @selector(xui_CGPath),                                                         @selector(CGPath));
     XUIAliasMethod(cls, '-', @selector(xui_setUsesEvenOddFillRule:),                                        @selector(setUsesEvenOddFillRule:));
     XUIAliasMethod(cls, '-', @selector(xui_usesEvenOddFillRule),                                            @selector(usesEvenOddFillRule));
 
     XUIAliasMethod(cls, '-', @selector(lineToPoint:),                                                       @selector(addLineToPoint:));
     XUIAliasMethod(cls, '-', @selector(curveToPoint:controlPoint1:controlPoint2:),                          @selector(addCurveToPoint:controlPoint1:controlPoint2:));
     XUIAliasMethod(cls, '-', @selector(appendBezierPath:),                                                  @selector(appendPath:));
+
+    // -[NSBezierPath CGPath] is in 10.10, but as private API.  Avoid runtime warning.
+    // <rdar://19094891> -[NSBezierPath CGPath] should be public API
+    if (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_9) {
+        XUIAliasMethod(cls, '-', @selector(xui_CGPath), @selector(CGPath));
+    }
 }
 
 
@@ -292,5 +297,14 @@ static void sPathApplier(void *info, const CGPathElement *element)
 }
 
 
+@end
+
+
+@interface XUIBezierPath : NSBezierPath
+@end
+
+
+@implementation XUIBezierPath : NSBezierPath
+- (CGPathRef) CGPath { return [self xui_CGPath]; }
 @end
 

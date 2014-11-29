@@ -108,6 +108,9 @@
 }
 
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wall"
+
 - (id) xui_initWithWhite:(CGFloat)white alpha:(CGFloat)alpha INIT_METHOD
 {
     self = [NSColor colorWithWhite:white alpha:alpha];
@@ -148,6 +151,8 @@
     self = [NSColor colorWithCIColor:ciColor];
     return self;
 }
+
+#pragma clang diagnostic pop
 
 
 - (CIColor *) xui_CIColor
