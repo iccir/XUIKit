@@ -12,26 +12,26 @@
 		551008EA159BEE7D00C86022 /* XUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 55545A3814EC6B1B0074B45E /* XUIGeometry.m */; };
 		551008EB159BEE7D00C86022 /* XUIGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 55545A2E14EC68F80074B45E /* XUIGraphics.m */; };
 		55100902159BEE7D00C86022 /* XUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55545A1E14EC60D70074B45E /* XUIView.m */; };
-		55100903159BEEA600C86022 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D4248614EDDB31001F6F71 /* XUIKit.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		55100907159BEED100C86022 /* XUIGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A3714EC6B1B0074B45E /* XUIGeometry.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		55100908159BEED100C86022 /* XUIGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A2D14EC68F70074B45E /* XUIGraphics.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		55100920159BEED100C86022 /* XUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A1D14EC60D70074B45E /* XUIView.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		559BE0C2159C151F00A1735C /* XUIBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A3514EC69500074B45E /* XUIBase.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55100903159BEEA600C86022 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D4248614EDDB31001F6F71 /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55100907159BEED100C86022 /* XUIGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A3714EC6B1B0074B45E /* XUIGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55100908159BEED100C86022 /* XUIGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A2D14EC68F70074B45E /* XUIGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55100920159BEED100C86022 /* XUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A1D14EC60D70074B45E /* XUIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559BE0C2159C151F00A1735C /* XUIBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 55545A3514EC69500074B45E /* XUIBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		559BE0EF159C19F900A1735C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559BE0EE159C19F800A1735C /* QuartzCore.framework */; };
-		55F84906181CC05700BABB66 /* XUITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84905181CC05700BABB66 /* XUITypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		55F8490C181CC13A00BABB66 /* XUIBezierPathAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84908181CC13A00BABB66 /* XUIBezierPathAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55F84906181CC05700BABB66 /* XUITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84905181CC05700BABB66 /* XUITypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55F8490C181CC13A00BABB66 /* XUIBezierPathAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84908181CC13A00BABB66 /* XUIBezierPathAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F8490D181CC13A00BABB66 /* XUIBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F84909181CC13A00BABB66 /* XUIBezierPathAdditions.m */; };
-		55F8490E181CC13A00BABB66 /* XUIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F8490A181CC13A00BABB66 /* XUIColorAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55F8490E181CC13A00BABB66 /* XUIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F8490A181CC13A00BABB66 /* XUIColorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F8490F181CC13A00BABB66 /* XUIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F8490B181CC13A00BABB66 /* XUIColorAdditions.m */; };
-		55F84912181CC16C00BABB66 /* XUIFontAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84910181CC16C00BABB66 /* XUIFontAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55F84912181CC16C00BABB66 /* XUIFontAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84910181CC16C00BABB66 /* XUIFontAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F84913181CC16C00BABB66 /* XUIFontAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F84911181CC16C00BABB66 /* XUIFontAdditions.m */; };
-		55F84916181CC21A00BABB66 /* XUIIndexPathAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84914181CC21A00BABB66 /* XUIIndexPathAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55F84916181CC21A00BABB66 /* XUIIndexPathAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84914181CC21A00BABB66 /* XUIIndexPathAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F84917181CC21A00BABB66 /* XUIIndexPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F84915181CC21A00BABB66 /* XUIIndexPathAdditions.m */; };
-		55F8491A181CC22500BABB66 /* XUIValueAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84918181CC22500BABB66 /* XUIValueAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55F8491A181CC22500BABB66 /* XUIValueAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84918181CC22500BABB66 /* XUIValueAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F8491B181CC22500BABB66 /* XUIValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F84919181CC22500BABB66 /* XUIValueAdditions.m */; };
 		55F8491E181CC2BB00BABB66 /* XUIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F8491C181CC2BB00BABB66 /* XUIViewAdditions.m */; };
-		55F8491F181CC2BB00BABB66 /* XUIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F8491D181CC2BB00BABB66 /* XUIViewAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		55F84922181CC99900BABB66 /* XUIImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84920181CC99900BABB66 /* XUIImageAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55F8491F181CC2BB00BABB66 /* XUIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F8491D181CC2BB00BABB66 /* XUIViewAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55F84922181CC99900BABB66 /* XUIImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F84920181CC99900BABB66 /* XUIImageAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F84923181CC99900BABB66 /* XUIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F84921181CC99900BABB66 /* XUIImageAdditions.m */; };
 /* End PBXBuildFile section */
 
@@ -328,6 +328,7 @@
 			baseConfigurationReference = 5579297B14FEE1FC00FCDE7C /* XUIKit_Mac_Debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
@@ -341,6 +342,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
@@ -354,6 +356,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;

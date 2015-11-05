@@ -20,6 +20,7 @@
 */
 
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
 #import <XUIKit/XUIBase.h>
 #import <XUIKit/XUITypes.h>
