@@ -367,6 +367,7 @@
 		55545A1214EC607B0074B45E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -376,6 +377,7 @@
 		55545A1314EC607B0074B45E /* Profile */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Profile;
@@ -383,6 +385,7 @@
 		5579298314FEE20900FCDE7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Release;
