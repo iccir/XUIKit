@@ -272,7 +272,7 @@
 		555459F514EC607B0074B45E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 555459F814EC607B0074B45E /* Build configuration list for PBXProject "XUIKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -332,6 +332,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
 			};
 			name = Debug;
 		};
@@ -345,6 +346,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
 			};
 			name = Profile;
 		};
@@ -358,12 +360,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
 			};
 			name = Release;
 		};
 		55545A1214EC607B0074B45E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 			};
