@@ -93,7 +93,7 @@
     int unitsPerEm = CTFontGetUnitsPerEm(ctFont);
 
     long ascent  = lroundf( (     CTFontGetAscent( ctFont)  /  unitsPerEm) * pointSize);
-    long descent = lroundf(-(-abs(CTFontGetDescent(ctFont)) /  unitsPerEm) * pointSize);
+    long descent = lroundf(-(-fabs(CTFontGetDescent(ctFont)) /  unitsPerEm) * pointSize);
     long lineGap = lroundf( (     CTFontGetLeading(ctFont)  /  unitsPerEm) * pointSize);
     
     return ascent + descent + lineGap;

@@ -272,7 +272,7 @@
 		555459F514EC607B0074B45E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 555459F814EC607B0074B45E /* Build configuration list for PBXProject "XUIKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -332,6 +332,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -345,6 +348,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
+				VALID_ARCHS = x86_64;
 			};
 			name = Profile;
 		};
@@ -358,12 +364,17 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
 		55545A1214EC607B0074B45E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 			};
@@ -372,6 +383,7 @@
 		55545A1314EC607B0074B45E /* Profile */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Profile;
@@ -379,6 +391,7 @@
 		5579298314FEE20900FCDE7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Release;
