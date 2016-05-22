@@ -332,7 +332,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -346,7 +348,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
+				VALID_ARCHS = x86_64;
 			};
 			name = Profile;
 		};
@@ -360,7 +364,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = Source/XUIKitPrefix.pch;
 				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iccir.XUIKit;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
