@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 XUIKit.xcodeproj/xcuserdata
+=======
+Carthage/Build
+.DS_Store
+*.xcuserdatad
+>>>>>>> refs/remotes/mz2/master

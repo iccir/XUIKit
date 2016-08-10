@@ -18,6 +18,8 @@
     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#import <Cocoa/Cocoa.h>
+
 #import <XUIKit/XUITypes.h>
 
 
