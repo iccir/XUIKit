@@ -19,8 +19,7 @@
 */
 
 #import <XUIKit/XUITypes.h>
-#import <Foundation/Foundation.h>
-
+#import <Cocoa/Cocoa.h>
 
 @class CIImage;
 

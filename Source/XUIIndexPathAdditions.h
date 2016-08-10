@@ -17,8 +17,10 @@
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#import <XUIKit/XUITypes.h>
 
+#import <Cocoa/Cocoa.h>
+
+#import <XUIKit/XUITypes.h>
 
 @interface NSIndexPath (XUIKitAdditions)
 
